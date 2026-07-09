@@ -1,0 +1,17 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a0f0a"/>
+      <stop offset="55%" stop-color="#3d1f0f"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#g)"/>
+  <circle cx="1000" cy="140" r="200" fill="#fb923c" opacity="0.15"/>
+  <circle cx="160" cy="480" r="180" fill="#fbbf24" opacity="0.1"/>
+  <text x="80" y="120" fill="#fdba74" font-family="system-ui,sans-serif" font-size="28" letter-spacing="6">LITVM · ON-CHAIN GAMING</text>
+  <text x="80" y="280" fill="#fff" font-family="system-ui,sans-serif" font-size="92" font-weight="700">LitChess</text>
+  <text x="80" y="360" fill="#fed7aa" font-family="system-ui,sans-serif" font-size="32">Decentralized chess + escrow betting</text>
+  <text x="80" y="420" fill="#cbd5e1" font-family="system-ui,sans-serif" font-size="26">Play vs Player · Practice vs AI</text>
+  <text x="80" y="560" fill="#64748b" font-family="ui-monospace,monospace" font-size="22">litchess.in</text>
+</svg>

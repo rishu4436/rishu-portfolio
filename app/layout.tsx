@@ -1,46 +1,39 @@
 import type { Metadata } from "next";
-import { Syne, JetBrains_Mono } from "next/font/google";
+import { Cormorant_Garamond, IBM_Plex_Mono, Instrument_Sans } from "next/font/google";
 import "./globals.css";
 
-const display = Syne({
+const sans = Instrument_Sans({
   subsets: ["latin"],
-  variable: "--font-display",
+  weight: ["400", "500", "600"],
+  variable: "--font-sans",
   display: "swap",
 });
 
-const mono = JetBrains_Mono({
+const serif = Cormorant_Garamond({
   subsets: ["latin"],
+  weight: ["500", "600"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const mono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
   variable: "--font-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rishu4436.vercel.app"),
-  title: "Rishu Kumar Gupta — Blockchain Developer & AI Builder",
+  title: "Rishu Kumar Gupta — Four sides",
   description:
-    "Blockchain developer & AI builder from Gopalganj, Bihar, India. Genesis ranked 2nd on Track 1 at BNB Hack: AI Trading Agent Edition (BNB Chain × CMC × Trust Wallet).",
+    "Personal site of Rishu Kumar Gupta. Four sides of one builder: Trade, Create, Community, and Build.",
   openGraph: {
-    title: "Rishu Kumar Gupta — Blockchain Developer & AI Builder",
+    title: "Rishu Kumar Gupta — Four sides",
     description:
-      "Genesis: 2nd place Track 1 — Autonomous Trading Agents. Official BNB Chain winners announcement.",
+      "Personal site of Rishu Kumar Gupta. Four sides of one builder: Trade, Create, Community, and Build.",
     type: "website",
     locale: "en_US",
-    images: [
-      {
-        url: "/og/og.png",
-        width: 1200,
-        height: 630,
-        alt: "Rishu Kumar Gupta — Genesis 2nd Track 1",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Rishu Kumar Gupta — Blockchain Developer & AI Builder",
-    description:
-      "Genesis · 2nd Track 1 · BNB Hack AI Trading Agent Edition. LitVM · OPN · AI agents.",
-    creator: "@rishabh4436",
-    images: ["/og/og.png"],
   },
 };
 
@@ -50,8 +43,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${display.variable} ${mono.variable}`}>
-      <body className="antialiased">{children}</body>
+    <html lang="en" className={`${sans.variable} ${serif.variable} ${mono.variable}`}>
+      <body>{children}</body>
     </html>
   );
 }
